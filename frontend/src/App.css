@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family:  "Raleway", sans-serif;
+
+
+}
+
+.icon-container {
+  position: relative; /* Enables positioning for the tooltip */
+  display: inline-block; /* Ensures the icon and tooltip are inline */
+}
+
+.icon {
+  font-size: 2rem; /* Adjust size of the icon */
+  cursor: pointer; /* Indicates the icon is interactive */
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%; /* Position the tooltip above the icon */
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Center align */
+  background-color: black; /* Tooltip background */
+  color:white; /* Tooltip text color */
+  padding: 5px 10px; /* Add some spacing inside the tooltip */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 0.9rem; /* Adjust text size */
+  white-space: nowrap; /* Prevent tooltip from wrapping */
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Ensure it's inaccessible when hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.icon-container:hover .tooltip {
+  opacity: 1; /* Show tooltip on hover */
+  visibility: visible; /* Make it accessible */
+}
+
+
